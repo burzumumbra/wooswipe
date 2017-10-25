@@ -21,8 +21,6 @@ WooSwipe should work out of the box with your WooCommerce gallery settings. Simp
 * Keyboard control
 * Full image size
 * 2 colour options
-
-Planned Features:
 * Show titles or captions
 
 Actions:

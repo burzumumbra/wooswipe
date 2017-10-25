@@ -93,9 +93,10 @@
     // Adding items to image for lightbox
     if ($('.thumbnails .thumb').length > 0) {
       var $thumbs = $('.thumbnails .thumb');
-      var thumbAlt = $thumbs.find("img").attr("alt");
+      var thumbAlt = $(".thumbnails .thumb img")
+        .map(function(){return $(this).attr("alt");}).get();
       for (var i = 0; i < $thumbs.length; i++) {
-        $thumbs.attr('data-title', thumbAlt);
+        $thumbs.attr('data-title', thumbAlt[i]);
         pushItem($thumbs[i]);
       }
     } else if ($('.single-product-main-image').length > 0) {
